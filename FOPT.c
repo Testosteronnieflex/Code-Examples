@@ -50,7 +50,7 @@ double Bfield[Latticesize][Latticesize]={0}; //The Bfield for all the lattice po
 //Contains an array of wether the thirdneibhbour is up or down
 bool Updownarray[Latticesize][Latticesize];
 
-//De moiréroosterconstante
+//De moirÃ©roosterconstante
 double a_moir=36.373067;
 
 //The reciprical lattice vectors for the moire super lattice
@@ -938,7 +938,7 @@ int main(int argc, char *argv[])
 
     //}
     /*
-    printf("ENERGIËN NAAT EQUILIBRUIEREN\n");
+    printf("ENERGIÃ‹N NAAT EQUILIBRUIEREN\n");
     for(int i=0;i<NTHREADS;++i)
     {
         printf("T=%lf\t E=%lf\n",Temperature_array[i],E_tot_array[i]);
@@ -961,7 +961,7 @@ int main(int argc, char *argv[])
         Ndown_arr[i]=false;
     }
 
-    //!We hebben nu startgrids en de energieën, we gaan nu de temperaturen optimaliseren
+    //!We hebben nu startgrids en de energieÃ«n, we gaan nu de temperaturen optimaliseren
     int N_sw=100000; //De hoeveelheid sweeps per temepratuur equilbriatiestap
     for(int i=0;i<5;++i)
     {
@@ -993,7 +993,7 @@ int main(int argc, char *argv[])
                     //Dit izjn de indexen van de gewenste temperaturen
                     int L_i=Lattice_index[k];
                     int L_j=Lattice_index[k+1];
-                    //En haal daaruit de energieën enzo
+                    //En haal daaruit de energieÃ«n enzo
                     double kbT_i=Temperature_array[L_i];
                     double kbT_j=Temperature_array[L_j];
                     double E_i=E_tot_array[L_i];
@@ -1026,7 +1026,7 @@ int main(int argc, char *argv[])
                     //Dit izjn de indexen van de gewenste temperaturen
                     int L_i=Lattice_index[k];
                     int L_j=Lattice_index[k+1];
-                    //En haal daaruit de energieën enzo
+                    //En haal daaruit de energieÃ«n enzo
                     double kbT_i=Temperature_array[L_i];
                     double kbT_j=Temperature_array[L_j];
                     double E_i=E_tot_array[L_i];
@@ -1153,7 +1153,7 @@ int main(int argc, char *argv[])
             double etaint=0.;//de waarde van het integraal tot dan toe
             int id_t=0; //dit is de index van de temperatuur totaan waar we tot nu toe hebben geintergreerd
             int id_t1=1;
-            ///allebei op id_t geïnitialiseerd want valt staks toch weer weg
+            ///allebei op id_t geÃ¯nitialiseerd want valt staks toch weer weg
             ///NOG FF NETJES DOEN MET DIE ID_T ENZO
             int L_t=Lattice_index[id_t];
             int L_t1=Lattice_index[id_t1];
@@ -1251,7 +1251,7 @@ int main(int argc, char *argv[])
                 Flipspins(kbT,J,Jex,Ac,As,D,alpha,id);
                 //printf("%lf\n",E_tot_array[j]);
             }
-            //Na het doen van de MC-steppen de energieën uitrekenen
+            //Na het doen van de MC-steppen de energieÃ«n uitrekenen
             //!TODO SNELLER, doen met +- enzo
             //E_tot_array[id]=Calculate_E_tot(J,Jex,Ac,As,D,id);
         }
@@ -1265,7 +1265,7 @@ int main(int argc, char *argv[])
             //Dit izjn de indexen van de gewenste temperaturen
             int L_i=Lattice_index[j];
             int L_j=Lattice_index[j+1];
-            //En haal daaruit de energieën enzo
+            //En haal daaruit de energieÃ«n enzo
             double kbT_i=Temperature_array[L_i];
             double kbT_j=Temperature_array[L_j];
             double E_i=E_tot_array[L_i];
